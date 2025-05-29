@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.payment-box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  gap: 30px;
+}
+.pba {
+  flex: 1 1 400px;
+  color: white;
+}
+
+.pba h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 10px;
+}
+.bab {
+  margin-bottom: 15px;
+}
+
+.bab p {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.bab input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.bab input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bab input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+.extra {
+  display: flex;
+  gap: 20px;
+}
+
+.extra > div {
+  flex: 1;
+}
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #0097a7;
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .payment-box {
+    flex-direction: column;
+  }
+}

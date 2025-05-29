@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+.loginpage {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.loginpage-left {
+    background-color: #1e1e2f;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginpage-left .logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.loginpage-left .logo span {
+    color: #00d9ff;
+}
+
+.loginpage-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.loginpage-left p span {
+    font-weight: bold;
+    color: #fff;
+}
+.loginpage-right {
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+    color: #333;
+}
+
+.loginpage-right input[type="text"],
+.loginpage-right input[type="password"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.loginpage-right input:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+.loginpage-right label {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.loginpage-right button {
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    background-color: #2575fc;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginpage-right button:hover {
+    background-color: #1a59c5;
+}
+
+.loginpage-right a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #2575fc;
+    font-size: 14px;
+}
+
+.loginpage-right a span {
+    font-weight: bold;
+}
+.result {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .loginpage {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .loginpage-left,
+    .loginpage-right {
+        padding: 30px;
+        flex: none;
+        width: 100%;
+    }
+}

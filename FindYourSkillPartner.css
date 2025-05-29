@@ -1,0 +1,201 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #eee;
+  background-color: #121212;
+  overflow-x: hidden;
+}
+.navbar {
+  position: relative;
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 188, 212, 0.3);
+}
+
+.logo {
+  color: #f08804;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.navbar span {
+  color: #00bcd4;
+  text-shadow:
+    0 0 10px #00bcd4,
+    0 0 20px #00bcd4;
+  animation: highlightPulse 4s ease-in-out infinite;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  gap: 2rem;
+}
+
+.skills-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+.skills-heading span {
+  color: #00bcd4;
+  text-shadow:
+    0 0 10px #00bcd4,
+    0 0 20px #00bcd4;
+  animation: highlightPulse 4s ease-in-out infinite;
+}
+
+.skills-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 1.5rem;
+}
+.skills-box {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: #eee;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 5px rgba(0, 188, 212, 0.2);
+}
+
+.skills-box::placeholder {
+  color: #aaa;
+}
+
+.skills-box:focus {
+  outline: none;
+  border: 2px solid #00bcd4;
+  box-shadow: 0 0 15px #00bcd4;
+}
+.skills-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px #00bcd4;
+}
+
+.skills-box.error {
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 12px #ff4d4d;
+  animation: shake 0.3s ease-in-out;
+}
+.cta {
+  margin-top: 2rem;
+}
+
+.cta a {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 0 8px #9400D3;
+  background-color: #f08804;
+  animation: glowPulse 2.5s infinite alternate;
+  font-size: 1.1rem;
+}
+
+.cta a:hover {
+  background-color: #00bcd4;
+  box-shadow: 0 0 25px #ffd97a, 0 0 50px #ffd97a;
+  color: #fff;
+  transform: scale(1.05);
+}
+.success-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00bcd4;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 25px #00bcd4;
+  font-weight: bold;
+  animation: fadeSlideIn 0.5s ease forwards;
+  z-index: 1000;
+}
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 8px #9400D3, 0 0 20px #9400D3;
+  }
+  100% {
+    box-shadow: 0 0 15px #ffd97acc, 0 0 35px #ffd97aac;
+  }
+}
+
+@keyframes highlightPulse {
+  0%, 100% {
+    color: #00bcd4;
+    text-shadow: 0 0 10px #00bcd4;
+  }
+  50% {
+    color: #00e5ff;
+    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff;
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+@media (max-width: 600px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+
+  .skills-box {
+    width: 90%;
+  }
+
+  .cta a {
+    width: 90%;
+    text-align: center;
+  }
+
+  .success-message {
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+  }
+}
